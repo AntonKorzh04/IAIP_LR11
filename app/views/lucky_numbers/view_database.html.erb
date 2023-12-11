@@ -1,0 +1,17 @@
+<h1>LuckyNumbers view_database</h1>
+<div class="col-4">
+    <%= button_to "Назад", { :action => "input" }, :method => :get, :class => "btn btn-primary" %>
+
+    <table id="result_table" class="table">
+        <tr>
+            <th>numbers_count</th>
+            <th>data</th>
+        </tr>
+        <% @all_lucky_numbers.each do |el| %>
+            <tr>
+                <td><%= el.numbers_count %></td>
+                <td><%= el.data %></td>
+            </tr>
+        <% end %>   
+    </table>
+</div>
